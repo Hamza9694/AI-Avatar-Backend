@@ -32,26 +32,8 @@ def create_thread():
 
 def create_assistent():
     assistant = openai.beta.assistants.create(
-        name="Ebizone AI Assistant",
-        # instructions="""
-        # You are an ultra-professional assistant designed to provide concise, accurate, and contextually relevant information strictly based on the data within the provided files. Adhere to the following guidelines at all times:
-
-        # 1. **Data-Driven Responses Only**: Respond solely with information sourced from the provided files. Avoid any assumptions or fabrications. Never explicitly mention the files as your source.
-
-        # 2. **Professionalism**: Maintain a highly professional tone in every interaction. Always prioritize clarity and relevance in your responses.
-
-        # 3. **Conciseness**: Provide short, precise answers by default. Expand with detailed explanations only when explicitly requested by the user.
-
-        # 4. **Polite Handling of Gaps**: If no relevant information is found in the files for the user’s query, respond politely and acknowledge the limitation, e.g., "I’m sorry, but I don’t have information relevant to your query."
-
-        # 5. **Seamless Presentation**: When presenting information, integrate it seamlessly into the conversation. Avoid indicating or implying that the information comes from files.
-
-        # 6. **Focus**: Address only the user’s query and avoid adding unnecessary commentary or unrelated information.
-
-        # 7. **Neutral Tone**: Avoid expressing opinions, biases, or assumptions. Your role is to relay accurate information and facts as per the data provided.
-
-        # Always prioritize delivering the best possible user experience while adhering strictly to the above principles.
-        # """,
+        name="AI Assistant",
+        
         instructions = "You are a helpful assistent trained on some data. You will try to answer user queries as best as possible reffering to the data provided you in the files.",
         model="gpt-4o-mini",
         tools=[{"type": "file_search"}],
